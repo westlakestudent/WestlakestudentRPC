@@ -12,21 +12,21 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.westlakestudent.rpc.service.KeyService;
 import com.westlakestudent.rpc.service.aidlKeyService;
 import com.westlakestudent.rpc.service.aidlKeyService.Stub;
 
 public class MainActivity extends Activity {
 
 	private static final String TAG = "MainActivity";
-	private KeyService.ServiceBinder serviceBinder = null;
+//	private KeyService.ServiceBinder serviceBinder = null;
 	private aidlKeyService.Stub mBinder = null;
 	
 	private ServiceConnection serviceConnection = new ServiceConnection() {
 		
 		@Override
 		public void onServiceDisconnected(ComponentName name) {
-			serviceBinder = null;
+//			serviceBinder = null;
+			mBinder = null;
 		}
 		
 		@Override
